@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "build": "tsc -p ./",
-    "start": "nodemon main.ts",
+    "start": "nodemon src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

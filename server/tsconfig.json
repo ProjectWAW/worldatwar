@@ -10,7 +10,7 @@
     "removeComments": true,
     "sourceMap": true,
 
-    "rootDir": "./",
+    "rootDir": "./src",
     "outDir": "./build"
   }
 }

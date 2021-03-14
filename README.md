@@ -14,18 +14,6 @@ The wiki part contains pages for all countries, puppets and colonies and all the
 
 The map part is an interactive map similar to google maps with countries and their puppets showed on the map painted according to their faction. The map shows the borders and frontlines for each day from October 1935 (start of the Italo-Ethiopian war) to September 1945 (end of WWII), and also shows the events that happened on a particular day.
 
-## Technologies
-
-(Pending Changes)
-Project is created with:
-
-- HTML 5
-- CSS 4
-- JavaScript 9
-- Bootstrap 3.4
-- jQuery 3.4
-- Leaflet 1.7.1
-
 ## Process for getting the website running locally
 
 To be determined.

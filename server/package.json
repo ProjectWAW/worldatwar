@@ -1,0 +1,32 @@
+{
+  "name": "waw-api",
+  "version": "0.0.1",
+  "description": "The back-end api for the World at War project.",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc -p ./",
+    "start": "nodemon main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectWAW/worldatwar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProjectWAW/worldatwar/issues"
+  },
+  "homepage": "https://github.com/ProjectWAW/worldatwar#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.34",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}

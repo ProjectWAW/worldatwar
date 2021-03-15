@@ -1,9 +1,10 @@
 import express from "express";
 
 import Logger from "./modules/logging/logger";
+import Config from "./modules/config/config";
 
 const app = express();
-const PORT = 3000;
+const PORT = Config.App.Port;
 
 app.get("/", (req, res) => res.send("Hello World!"));
 

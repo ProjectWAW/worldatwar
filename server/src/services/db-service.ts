@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import Config from "../modules/config/config";
 import Logger from "../modules/logging/logger";
 
+import Country from "../models/country.model";
+
 export class DbService {
   private conf: Config;
 
@@ -25,18 +27,7 @@ export class DbService {
     );
     db.once("open", () => Logger.debug("It works?"));
 
-    const countrySchema = new mongoose.Schema({
-      _id: String,
-      government: String,
-      headOfGovernment: String,
-      name: String,
-      party: String,
-      status: String,
-    });
-
-    const Country = mongoose.model("Country", countrySchema);
-
-    let country = new Country({
+    const country = new Country({
       _id: "abc",
       government: "baguette",
       headOfGovernment: "jake",

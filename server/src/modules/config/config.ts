@@ -7,9 +7,11 @@ type Config = {
     Port: string;
   };
   DB: {
-    Host: string;
-    Port: string;
     AuthSource: string;
+    Host: string;
+    Password: string;
+    Port: string;
+    User: string;
   };
 };
 
@@ -19,9 +21,11 @@ function createConfig(): Config {
       Port: process.env.APP_PORT,
     },
     DB: {
-      Host: process.env.DB_HOST,
-      Port: process.env.DB_PORT,
       AuthSource: process.env.DB_AUTH_SOURCE,
+      Host: process.env.DB_HOST,
+      Password: process.env.DB_PASSWORD,
+      Port: process.env.DB_PORT,
+      User: process.env.DB_USER,
     },
   } as Config;
 

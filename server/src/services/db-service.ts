@@ -17,7 +17,38 @@ export class DbService {
 
     let db = mongoose.connection;
 
-    db.on("error", () => Logger.error("Shit went south :("));
+    db.on("error", (err: Error) =>
+      Logger.error(
+        `Unable to establish connection to the database:\n\t${err.name}:\n\t${err.message}\n` +
+          "-".repeat(80)
+      )
+    );
     db.once("open", () => Logger.debug("It works?"));
+
+    const countrySchema = new mongoose.Schema({
+      _id: String,
+      government: String,
+      headOfGovernment: String,
+      name: String,
+      party: String,
+      status: String,
+    });
+
+    const Country = mongoose.model("Country", countrySchema);
+
+    let country = new Country({
+      _id: "abc",
+      government: "baguette",
+      headOfGovernment: "jake",
+      name: "france",
+      party: "honhon",
+      status: "surrendering",
+    });
+
+    country.save((err, country) => {
+      if (err) {
+        Logger.error(`Well this is borked: ${err}`);
+      }
+    });
   }
 }

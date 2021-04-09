@@ -1,4 +1,5 @@
 import express from "express";
+import createError from "http-errors";
 
 import Logger from "./modules/logging/logger";
 import Config from "./modules/config/config";
@@ -18,6 +19,11 @@ app.use("/countries", Countries);
 app.get("/dbtest", (req, res) => {
   dbService.getDbConnection();
   res.send("Testing DB");
+});
+
+// Catch 404 and forward to error handler
+app.use((req, res, next) => {
+  next(createError(404));
 });
 
 app.listen(PORT, () => {

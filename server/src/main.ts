@@ -10,14 +10,11 @@ const app = express();
 const PORT = Config.App.Port;
 
 const dbService = new DbService();
+dbService.ConnectToDb();
 
 // Routes
 app.get("/", (req, res) => res.send("Server Status is good! ✔"));
 app.use("/countries", Countries);
-app.get("/dbtest", (req, res) => {
-  dbService.getDbConnection();
-  res.send("Testing DB");
-});
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {

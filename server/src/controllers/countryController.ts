@@ -16,8 +16,16 @@ export default class CountryController {
       });
   }
 
-  static countryById(req: Request, res: Response) {
-    res.send("NOT IMPLEMENTED: Country by Id" + req.params.id);
+  static countryById(req: Request, res: Response, next: NextFunction) {
+    Country.findById({ _id: req.params.id })
+      .exec()
+      .then((result) => {
+        res.status(200).json(result);
+      })
+      .catch((err: Error) => {
+        Logger.error(err.message);
+        return next(err);
+      });
   }
 
   static countryCreate(req: Request, res: Response) {

@@ -3,8 +3,8 @@ import controller from "../controllers/countryController";
 
 const router = express.Router();
 
-router.get("/", controller.countryList);
-router.get("/:id", controller.countryById);
-router.post("/create", controller.countryCreate);
+router.get("/", controller.getAll);
+router.get("/:id", controller.getById);
+router.post("/create", controller.add);
 
 export default router;

@@ -4,7 +4,7 @@ import Country from "../models/country.model";
 import Logger from "../modules/logging/logger";
 
 export default class CountryController {
-  static countryList(req: Request, res: Response, next: NextFunction) {
+  static getAll(req: Request, res: Response, next: NextFunction): void {
     Country.find({})
       .exec()
       .then((result) => {
@@ -16,7 +16,7 @@ export default class CountryController {
       });
   }
 
-  static countryById(req: Request, res: Response, next: NextFunction) {
+  static getById(req: Request, res: Response, next: NextFunction): void {
     Country.findById({ _id: req.params.id })
       .exec()
       .then((result) => {
@@ -28,7 +28,7 @@ export default class CountryController {
       });
   }
 
-  static countryCreate(req: Request, res: Response) {
+  static add(req: Request, res: Response, next: NextFunction): void {
     res.send("NOT IMPLEMENTED: Create Country");
   }
 }

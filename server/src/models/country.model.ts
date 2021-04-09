@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
-import { Guid } from "guid-typescript";
 
 const Schema = mongoose.Schema;
 
 const CountrySchema = new Schema({
-  _id: Guid,
+  _id: String,
   government: String,
   headOfGovernment: String,
   name: String,

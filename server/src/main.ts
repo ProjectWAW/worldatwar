@@ -12,9 +12,12 @@ const PORT = Config.App.Port;
 const dbService = new DbService();
 dbService.ConnectToDb();
 
+// Middleware
+app.use(express.json());
+
 // Routes
-app.get("/", (req, res) => res.send("Server Status is good! ✔"));
 app.use("/countries", Countries);
+app.get("/", (req, res) => res.send("Server Status is good! ✔"));
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {

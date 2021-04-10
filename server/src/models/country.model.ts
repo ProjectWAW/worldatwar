@@ -4,8 +4,10 @@ const Schema = mongoose.Schema;
 
 const CountrySchema = new Schema({
   _id: String,
+  capital: String,
   government: String,
   headOfGovernment: String,
+  headOfState: String,
   name: String,
   party: String,
   status: String,

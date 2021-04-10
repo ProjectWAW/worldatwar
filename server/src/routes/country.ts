@@ -1,10 +1,11 @@
 import express from "express";
+
 import controller from "../controllers/countryController";
 
 const router = express.Router();
 
 router.get("/", controller.getAll);
 router.get("/:id", controller.getById);
-router.post("/create", controller.add);
+router.post("/", controller.add);
 
 export default router;

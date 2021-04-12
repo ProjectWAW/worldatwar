@@ -9,6 +9,8 @@
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
     "sourceMap": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
 
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

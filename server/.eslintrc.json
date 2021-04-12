@@ -5,7 +5,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:node/recommended",
+    // "plugin:node/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -22,7 +22,7 @@
     "complexity": ["error", 10],
     "curly": "error",
     "dot-location": ["error", "property"],
-    "node/handle-callback-err": "error",
+    // "node/handle-callback-err": "error",
     "indent": ["error", 2],
     // "linebreak-style": ["error", "unix"],
     "max-nested-callbacks": ["error", { "max": 3 }],

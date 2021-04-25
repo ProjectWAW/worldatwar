@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -10,7 +10,7 @@ const CountrySchema = new Schema({
   headOfState: String,
   name: String,
   party: String,
-  status: String,
+  status: String
 });
 
-export default mongoose.model("Country", CountrySchema);
+export default mongoose.model('Country', CountrySchema);

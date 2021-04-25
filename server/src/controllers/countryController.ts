@@ -1,8 +1,8 @@
-import { NextFunction, Request, Response } from "express";
-import { v4 as uuid } from "uuid";
+import { NextFunction, Request, Response } from 'express';
+import { v4 as uuid } from 'uuid';
 
-import Country from "../models/country.model";
-import Logger from "../modules/logging/logger";
+import Country from '../models/country.model';
+import Logger from '../modules/logging/logger';
 
 export default class CountryController {
   static getAll(req: Request, res: Response, next: NextFunction): void {
@@ -30,7 +30,7 @@ export default class CountryController {
   }
 
   static add(req: Request, res: Response, next: NextFunction): void {
-    let data = req.body;
+    const data = req.body;
     data._id = uuid();
     const newCountry = new Country(data);
 

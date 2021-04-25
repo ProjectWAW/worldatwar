@@ -19,7 +19,7 @@ export class DbService {
         useUnifiedTopology: true
       });
     }
-    catch (err: any) {
+    catch (err) {
       Logger.error(`Unable to establish DB connection: ${err.message}`);
     }
   }

@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "description": "The back-end api for the World at War project.",
   "main": "main.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc -p ./",
-    "start": "nodemon src/main.ts",
+    "start": "node build/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

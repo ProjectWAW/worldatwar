@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-import Config from "../modules/config/config";
-import Logger from "../modules/logging/logger";
+import Config from '../modules/config/config';
+import Logger from '../modules/logging/logger';
 
 export class DbService {
   private conf: Config;
@@ -10,15 +10,16 @@ export class DbService {
     this.conf = Config;
   }
 
-  public async ConnectToDb() {
+  public async ConnectToDb(): Promise<void> {
     const uri = `mongodb+srv://${this.conf.DB.User}:${this.conf.DB.Password}@${this.conf.DB.Host}?authSource=${this.conf.DB.AuthSource}&retryWrites=true&w=majority`;
 
     try {
       mongoose.connect(uri, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
+        useUnifiedTopology: true
       });
-    } catch (err: any) {
+    }
+    catch (err: any) {
       Logger.error(`Unable to establish DB connection: ${err.message}`);
     }
   }

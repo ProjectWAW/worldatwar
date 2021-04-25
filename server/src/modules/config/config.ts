@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -16,17 +16,17 @@ type Config = {
 };
 
 function createConfig(): Config {
-  let config = {
+  const config = {
     App: {
-      Port: process.env.APP_PORT,
+      Port: process.env.APP_PORT
     },
     DB: {
       AuthSource: process.env.DB_AUTH_SOURCE,
       Host: process.env.DB_HOST,
       Password: process.env.DB_PASSWORD,
       Port: process.env.DB_PORT,
-      User: process.env.DB_USER,
-    },
+      User: process.env.DB_USER
+    }
   } as Config;
 
   return config;

@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "tsc -p server/",
+    "start": "node server/build/main.js"
+  }
+}

@@ -10,6 +10,7 @@ const CountrySchema = new Schema({
   headOfState: String,
   name: String,
   party: String,
+  shortName: String,
   status: String
 });
 

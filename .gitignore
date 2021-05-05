@@ -117,3 +117,7 @@ dist
 
 # TypeScript Output
 build/
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json

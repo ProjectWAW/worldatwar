@@ -4,6 +4,7 @@
     "start": "node server/build/main.js"
   },
   "engines": {
-    "node": ">=8.10.0"
+    "node": ">=8.10.0",
+    "npm": ">=7.8.0"
   }
 }

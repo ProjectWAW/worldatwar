@@ -18,7 +18,7 @@ type Config = {
 function createConfig(): Config {
   const config = {
     App: {
-      Port: process.env.APP_PORT
+      Port: process.env.PORT || process.env.APP_PORT
     },
     DB: {
       AuthSource: process.env.DB_AUTH_SOURCE,

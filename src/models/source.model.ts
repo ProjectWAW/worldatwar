@@ -9,7 +9,7 @@ const SourceSchema = new Schema({
   publishDate: String,
   publisher: Array,
   title: String,
-  type: Number,
+  type: String,
   url: String
 });
 
